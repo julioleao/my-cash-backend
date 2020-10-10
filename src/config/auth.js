@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const env = require('../.env');
 module.exports = (req, res, next) => {
   // CORS preflight request
   if (req.method === 'OPTIONS') {
@@ -10,7 +9,7 @@ module.exports = (req, res, next) => {
     if (!token) {
       return res.status(403).send({ errors: ['No token provided.'] });
     }
-    jwt.verify(token, env.AUTH_SECRET, function (err, decoded) {
+    jwt.verify(token, process.env.AUTH_SECRET, function (err, decoded) {
       if (err) {
         return res.status(403).send({
           errors: ['Failed to authenticate token.'],
