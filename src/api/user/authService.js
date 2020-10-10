@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const User = require('./user');
+const User = require('src/api/user/user.js');
 
 const emailRegex = /\S+@\S+\.\S+/;
 //const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/;
