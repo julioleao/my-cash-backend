@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors');
 const port = 3003;
 
 const bodyParser = require('body-parser');
@@ -9,7 +10,7 @@ const queryParser = require('express-query-int');
 
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
-server.use(allowCors);
+server.use(cors());
 server.use(queryParser());
 
 server.listen(process.env.PORT || port, function () {
