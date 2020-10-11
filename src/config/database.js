@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 mongoose.Promise = global.Promise;
 
 const url = process.env.MONGODB_URI
