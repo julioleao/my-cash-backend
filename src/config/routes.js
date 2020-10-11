@@ -1,5 +1,5 @@
 const express = require('express');
-const auth = require('src/config/auth.js');
+const auth = require('./auth');
 
 module.exports = function (server) {
   /*

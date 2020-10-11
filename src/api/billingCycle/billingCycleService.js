@@ -1,5 +1,5 @@
-const BillingCycle = require('src/api/billingCycle/billingCycle.js');
-const errorHandler = require('src/api/common/errorHandler.js');
+const BillingCycle = require('./billingCycle');
+const errorHandler = require('../common/errorHandler');
 
 BillingCycle.methods(['get', 'post', 'put', 'delete']);
 BillingCycle.updateOptions({ new: true, runValidators: true });
